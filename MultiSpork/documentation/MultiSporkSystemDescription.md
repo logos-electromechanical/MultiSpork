@@ -16,6 +16,10 @@ The MultiSpork is an analog and digital multitool. It has the following properti
 * Replicates behavior of a logic analyzer
 * Replicates behavior of a signal generator
 
+Features listed as (OPTIONAL) are ones that I haven't decided I'm definitely going to implement immediately, but that would be nice in the future. 
+
+----------
+
 # Hardware #
 
 ## General Hardware Requirements ##
@@ -152,15 +156,27 @@ CC3100 wiring follows the dictates of the datasheet.
 
 ### USB ###
 
-USB is a native peripheral of the microcontroller. The USB port is protected against ESD and electrical insults by series resistors, as 
+USB is a native peripheral of the microcontroller. The USB port is protected against ESD and electrical insults by series resistors.
 
 USB power is used to charge the battery.
 
 ### SD Card ###
 
-A micro-SD card slot provides non-volatile data storage when the Multispork is directed to log incoming data. 
+A micro-SD card slot provides non-volatile data storage when the Multispork is directed to log incoming data. It also provides storage for outgoing waveforms and (possibly) scripts to run. 
+
+### Idiot Lights ###
+
+The MultiSpork shall have the following idiot lights. Features listed in *italics* have not yet been implemented as of commit 872e8fda3353304001933b7b57375441d28ed381.
+
+* Charge, red LED
+* *Power, green LED*
+* *State, RGB LED*
 
 ### Power ###
+
+#### Switch ####
+
+The power switch controls the enable lines of all of the voltage regulators. In the off position, it puts them all to sleep.  
 
 #### Battery ####
 
@@ -196,10 +212,115 @@ The analog ground plane is connected to the digital ground plane through a small
 
 The production version of the MultiSpork will fit within a Dangerous Prototype DP8049 Sick of Beige footprint. 
 
-The PCB will be a 
+The PCB will be a four-layer design, 0.062" finished thickness. 
 
 ### Case ###
 
-# Firmware
+The case will be a milled Delrin case with an acrylic lid. It will have space for a battery and associated retention features. The case shall also provide a mechanism to operate the reset button and the power switch. It shall also provide visibility for the charge and power LEDs. 
 
-# Tablet
+## Future Hardware Features ##
+
+This is a list of things that I have thought of that would be nice to have but are probably not worth the candle, at least at the time.
+
+* GPS for accurate time and location tagging (see, for example, the SE4150L -- $3/ea in singles). This is significantly more interesting than just an RTC.
+* External RAM for larger on-board buffer
+
+----------
+
+# Firmware #
+
+The firmware configures the MAX11300, and exchanges data with the MAX11300, the WiFi, and the SD card. It has the following functions:
+
+* Acquire data from the ADC and GPI at full speed (400 ksps)
+* Pipe data to the DAC and GPO at full speed
+* Provide access to all major MAX11300 and CC3100 configuration options
+* Log data to SD card
+* Read arbitrary waveforms from SD card
+* Transmit data over WiFi to tablet
+* Generate standard analog waveforms (sine, square, triangle, white noise, etc)
+* Generate standard digital waveforms (PWM, PCM, etc)
+* Capture data from ADC/GPI based on trigger conditions (level and edge triggers)
+* Transmit data over DAC/GPO based on trigger conditions
+* (OPTIONAL) Apply arbitrary polynomial transfer functions to incoming data
+* (OPTIONAL) Apply mathematical functions (add, subtract, multiply, trig) to incoming data
+* (OPTIONAL) Pipe filtered data to arbitrary DAC channel
+* (OPTIONAL) Read configuration options from SD Card
+
+## Configuration ##
+
+The general intention is that the configuration options in the firmware are thin wrappers around the MAX11300 and CC3100 configuration registers. 
+
+## Data Flow ##
+
+The major system blocks are as follows:
+
+* **MAX11300** -- Primary physical interface, both in and out
+* **MCU SPI** -- The communications bus with all peripherals save the USB
+* **MCU buffers** -- Internal RAM buffers used for input and output 
+* **MCU filters** -- Internal filter programs
+* **MCU signal generator** -- Algorithmic signal generation
+* **SD Card** -- Local SD card for storing data
+* **CC3100** -- WiFi connection to host app
+* **USB** -- USB connection to host app
+* **Host App** -- Host application running on a tablet or other computer
+
+### MAX11300 ###
+
+The MAX11300 block communicates via the MCU SPI block. It takes in commands, configuration, and output data. It puts out input data from its analog and digital inputs. 
+
+### MCU SPI ###
+
+The SPI is the communications bus that connects the MAC11300, the MCU (and all its internal blocks), the SD card, and the CC3100. It may carry any of the data types that these blocks transmit or receive. 
+
+### MCU buffers ###
+### MCU filters ###
+### MCU signal generator ###
+### SD Card ###
+### CC3100 ###
+### USB ###
+### Host App###
+
+## States ##
+
+### Setup ###
+
+This is the state that the MultiSpork enters upon power-up or reset. In this state, it performs the following tasks before transitioning to either Standby or Logging mode (depending on configuration).
+
+1. Configures CC3100 per one of the following profiles (listed in priority order):
+	1. (OPTIONAL) WiFiConf.txt, stored on the SD Card
+	2. The wifi configuration stored in the EEPROM of the MCU
+	3. The default wifi configuration  
+2. Configure the MAX11300 per one of the following configurations (listed in priority order):
+	1. (OPTIONAL) IOConf.txt, stored on the SD Card
+	2. The I/O configuration stored in the EEPROM of the MCU
+	3. The default I/O configuration  
+4. Chooses mode to enter based on either EEPROM or (OPTIONAL)SD Card configuration.
+5. Gets current data/time from host device.
+
+### Standby ###
+
+This is the default waiting state. The primary activity in this state is executing configuration commands from the host app. The device will depart this state for pre-trigger, running capture, or logging based on input from either the host app or from a command file on the SD card. 
+
+The MCU can generate or output a signal through the MAX11300 in this mode and any other except Setup. 
+
+### Pre-Trigger ###
+
+During the pre-trigger state, the MCU commands the MAX11300 to sample the target channel(s) and saves the buffer such that when the trigger condition occurs, the app can display data from both before and after the trigger condition. 
+
+### Triggered Capture ###
+
+During a triggered capture, the device captures and streams data until it reaches the end of the specified capture window. It then either returns to the pre-trigger state or to standby, depending on whether the triggering is set to be continuous or one-shot.
+
+### Running Capture ###
+
+During a running capture, the device captures and streams data to the host app continuously, either via USB or WiFi.
+
+### Logging ###
+
+Logging works like a running capture except that the target is the SD card rather than USB or WiFi. Depending on settings, the MCU filters may decimate or otherwise process the incoming data before writing it out. 
+
+----------
+
+# Host App
+
+The host app shall be written 
