@@ -245,6 +245,8 @@ The firmware configures the MAX11300, and exchanges data with the MAX11300, the 
 * (OPTIONAL) Apply mathematical functions (add, subtract, multiply, trig) to incoming data
 * (OPTIONAL) Pipe filtered data to arbitrary DAC channel
 * (OPTIONAL) Read configuration options from SD Card
+* (OPTIONAL) Read and write data from accessories on the SPI and I2C busses
+* (OPTIONAL) Run arbitrary LUA scripts on incoming/outgoing data
 
 ## Configuration ##
 
@@ -273,12 +275,52 @@ The MAX11300 block communicates via the MCU SPI block. It takes in commands, con
 The SPI is the communications bus that connects the MAC11300, the MCU (and all its internal blocks), the SD card, and the CC3100. It may carry any of the data types that these blocks transmit or receive. 
 
 ### MCU buffers ###
+
+The MCU buffers incoming and outgoing data from and to the MAX11300 that is either going to or received from other blocks over the SPI. Each active channel has its own buffer, which will be either read or write depending on what function is currently configured on that channel. The WiFi, the USB, and the SD card each have a read and a write buffer.
+
 ### MCU filters ###
+
+The MCU can run filters (decimation, low pass, various multi-input math functions etc) against data that is in any buffer. The output is written to another buffer. 
+
 ### MCU signal generator ###
+
+The signal generator fills an output buffer with a specified function. Here is a list of functions to be implemented in the first iteration:
+
+* sine wave
+* square wave
+* triangle wave
+* sawtooth wave
+* PWM
+
 ### SD Card ###
+
+The SD card is a data store that the MCU can either write to or read from via SPI bus.
+
+Output data files will be stored as plain text CSV files in the format <channel>,<time>,<value>,<units>. In the case of raw values, the value of the <units> field shall be 'raw'. Any other value shall be set by the translating filter.
+
+Input data files shall be in .wav format. The name and details of the .wav file are set by the 
+
 ### CC3100 ###
+
+The CC3100 provides the WiFi link to the host app. It sends and receives data and commands from the MCU via SPI and communicates with the host app via WiFi. 
+
 ### USB ###
-### Host App###
+
+The USB performs the same functions as the WiFi when the USB is connected to a host. 
+
+### Host App ###
+
+The host app is the ultimate data sink and source in the system. It provides the following types of data to the device:
+
+* Commands (i.e. state changes, state details)
+* Configuration (i.e. trigger settings, channel settings)
+* .wav files for data output
+* (OPTIONAL) Commands, config, and outgoing data for things attached to the accessory connector.
+
+The host app receives the following types of data from the device:
+
+* Streaming input data from the MAX11300
+* Status from various parts of the device
 
 ## States ##
 
@@ -307,6 +349,21 @@ The MCU can generate or output a signal through the MAX11300 in this mode and an
 
 During the pre-trigger state, the MCU commands the MAX11300 to sample the target channel(s) and saves the buffer such that when the trigger condition occurs, the app can display data from both before and after the trigger condition. 
 
+Trigger conditions can come from any of the following sources:
+
+* Analog input
+* Digital input
+* Analog output
+* Digital output
+* Internal timebase
+
+Any of the following conditions can be used to trigger a capture
+
+* Level trigger
+* Edge trigger
+* Periodic trigger
+* Free run
+
 ### Triggered Capture ###
 
 During a triggered capture, the device captures and streams data until it reaches the end of the specified capture window. It then either returns to the pre-trigger state or to standby, depending on whether the triggering is set to be continuous or one-shot.
@@ -323,4 +380,6 @@ Logging works like a running capture except that the target is the SD card rathe
 
 # Host App
 
-The host app shall be written 
+The host app will be designed to present the acquired data in a format that can be readily viewed and manipulated by the user. 
+
+The host app shall be written in Kivy or similar cross-platform framework that allows them to run on not only Android tablets but also on Windows, Linux, and Mac. 
