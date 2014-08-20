@@ -364,17 +364,21 @@ Any of the following conditions can be used to trigger a capture
 * Periodic trigger
 * Free run
 
+Once the trigger condition is satisfied, the firmware transitions to the next state (either Triggered Capture, Running Capture, or Logging) as dictated by the received commands. 
+
 ### Triggered Capture ###
 
 During a triggered capture, the device captures and streams data until it reaches the end of the specified capture window. It then either returns to the pre-trigger state or to standby, depending on whether the triggering is set to be continuous or one-shot.
 
 ### Running Capture ###
 
-During a running capture, the device captures and streams data to the host app continuously, either via USB or WiFi.
+During a running capture, the device captures and streams data to the host app continuously, either via USB or WiFi. Starting and stopping 
 
 ### Logging ###
 
 Logging works like a running capture except that the target is the SD card rather than USB or WiFi. Depending on settings, the MCU filters may decimate or otherwise process the incoming data before writing it out. 
+
+It shall be possible to configure this state such that the logging proceeds for a limited time period and then transitions back to pre-triggered or standby. 
 
 ----------
 
