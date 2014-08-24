@@ -127,6 +127,8 @@ Microcontroller circuitry follows the datasheet to the extent required & practic
 
 The SPI bus provides the only means of communication between the major subsystems.
 
+The MCU will have at least 1 MByte of external SRAM in order to support a sufficiently deep buffer to tolerate excessive waits from the SD Card.
+
 #### Accessory connector ####
 
 The accessory connector exposes the serial communication interfaces of the MCU in order to provide a place for adding additional hardware. It is a 2x5 0.1" pitch pin header. It is not populated by default. 
