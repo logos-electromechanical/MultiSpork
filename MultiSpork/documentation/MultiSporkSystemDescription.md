@@ -387,3 +387,12 @@ It shall be possible to configure this state such that the logging proceeds for 
 The host app will be designed to present the acquired data in a format that can be readily viewed and manipulated by the user. 
 
 The host app shall be written in Kivy or similar cross-platform framework that allows them to run on not only Android tablets but also on Windows, Linux, and Mac. 
+
+The host app interface will follow the wireframes at https://logoselectromechanical.mybalsamiq.com/projects/multispork/
+
+----------
+
+# Communications
+
+The maximum data rate from the MAX11300 is 4.8 Mbps. This provides plenty of SPI bus headroom to stream to the host app and record simultaneously, since its maximum speed is 20 Mbps, as long as there's a minimal amount of framing data. This means that the outgoing data needs to be packed up such that a single set of framing data covers a substantial period of communications. 
+
