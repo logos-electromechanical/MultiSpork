@@ -30,7 +30,7 @@
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
@@ -2840,92 +2840,264 @@ Please make sure your boards conform to these design rules.</description>
 </autorouter>
 <elements>
 <element name="ANALOG" library="logos-headers" package="32P-SIDE-SMD" value="76385-316LF" x="86.36" y="38.1">
-<attribute name="PARTNO" value="76385-316LF " x="86.36" y="38.1" size="1.778" layer="27" display="off"/>
+<attribute name="PARTNO" value="76385-316LF" x="86.36" y="38.1" size="1.778" layer="27" display="off"/>
 </element>
-<element name="USB-IN" library="adafruit" package="USB-MINIB" value="" x="4.572" y="61.214" rot="R270"/>
-<element name="U1" library="logos-headers" package="MICRO-SD-SOCKET-PP" value="USD-SOCKETNEW" x="15.24" y="22.86" rot="R90"/>
-<element name="D1" library="logos-diodes" package="SOT26" value="SD103ASDM" x="9.652" y="28.956" rot="R90"/>
-<element name="R2" library="res-cap-arrays" package="CTS742C083-RES" value="100R" x="7.366" y="25.4" rot="R90"/>
-<element name="D2" library="logos-diodes" package="SOT26" value="SD103ASDM" x="5.08" y="28.956" rot="R90"/>
-<element name="C1" library="resistor" package="C0603" value="33p" x="10.414" y="25.4" rot="R270"/>
-<element name="C2" library="resistor" package="C0603" value="33p" x="5.08" y="32.004" rot="R180"/>
-<element name="C3" library="resistor" package="C0603" value="33p" x="2.032" y="28.956" rot="R90"/>
-<element name="ACC" library="pinhead-1" package="2X05" value="" x="49.022" y="66.04"/>
-<element name="R3" library="resistor" package="R0603" value="27R" x="12.7" y="60.706"/>
-<element name="R4" library="resistor" package="R0603" value="27R" x="12.7" y="62.484"/>
-<element name="C4" library="resistor" package="C0603" value="33p" x="12.7" y="64.008"/>
-<element name="C5" library="resistor" package="C0603" value="33p" x="12.7" y="58.928"/>
-<element name="R5" library="resistor" package="R0603" value="1K5" x="12.7" y="57.15"/>
-<element name="L1" library="SparkFun-Passives" package="0805" value="ferrite" x="12.7" y="65.786"/>
-<element name="D3" library="logos-diodes" package="SOT26" value="SD103ASDM" x="17.78" y="60.198" rot="R270"/>
-<element name="R6" library="res-cap-arrays" package="CTS742C083-RES" value="100R" x="51.562" y="61.722" rot="R270"/>
-<element name="R7" library="res-cap-arrays" package="CTS742C083-RES" value="100R" x="46.482" y="61.722" rot="R90"/>
-<element name="C6" library="resistor" package="C0603" value="10n" x="12.7" y="67.564"/>
-<element name="U2" library="atmel-sam3s" package="QFN48" value="SAM3SA-MU" x="50.8" y="44.704"/>
-<element name="C9" library="resistor" package="C0603" value="100n" x="38.862" y="43.688" rot="R270"/>
-<element name="C12" library="resistor" package="C0603" value="100n" x="48.514" y="48.26" rot="MR270"/>
-<element name="C13" library="resistor" package="C0603" value="100n" x="46.736" y="48.26" rot="MR90"/>
-<element name="C14" library="resistor" package="C0603" value="100n" x="48.006" y="38.862" rot="R270"/>
-<element name="C15" library="resistor" package="C0603" value="100n" x="57.404" y="46.228"/>
-<element name="C16" library="resistor" package="C0603" value="4u7" x="45.212" y="46.736" rot="R90"/>
-<element name="C17" library="resistor" package="C0603" value="4u7" x="45.212" y="43.688" rot="R270"/>
-<element name="C19" library="resistor" package="C0603" value="100n" x="42.164" y="50.546" rot="R180"/>
-<element name="C20" library="resistor" package="C0603" value="100n" x="47.244" y="43.942" rot="MR180"/>
-<element name="C22" library="resistor" package="C0603" value="100n" x="50.546" y="41.148" rot="MR90"/>
-<element name="C23" library="resistor" package="C0603" value="2u2" x="42.164" y="40.132" rot="R180"/>
-<element name="L2" library="SparkFun-Passives" package="INDUCTOR-1206" value="10u" x="42.164" y="45.212" rot="R90"/>
-<element name="C24" library="resistor" package="C0603" value="4u7" x="42.164" y="55.88" rot="R180"/>
-<element name="C25" library="resistor" package="C0603" value="100n" x="42.164" y="52.324" rot="R180"/>
-<element name="R8" library="resistor" package="R0603" value="1R" x="42.164" y="54.102"/>
-<element name="C26" library="resistor" package="C0603" value="100n" x="51.562" y="48.26" rot="MR270"/>
-<element name="C18" library="resistor" package="C0603" value="10u" x="38.862" y="46.736" rot="R90"/>
-<element name="H1" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="82.55" y="72.39"/>
-<element name="H2" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="82.55" y="3.81"/>
-<element name="H3" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="3.81" y="3.81"/>
-<element name="H4" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="3.81" y="72.39"/>
-<element name="F1" library="adafruit" package="R1206" value="500 mA" x="17.78" y="65.786"/>
-<element name="R9" library="resistor" package="R0603" value="10K" x="17.78" y="70.104"/>
-<element name="C7" library="resistor" package="C1206" value="10u" x="17.78" y="68.072" rot="R180"/>
-<element name="C8" library="resistor" package="C1206" value="10u" x="17.78" y="63.5" rot="R180"/>
-<element name="F2" library="adafruit" package="R1206" value="1500 mA" x="12.446" y="45.72"/>
-<element name="JP1" library="MultiSpork-parts" package="PINHEAD_2X05_127" value="" x="60.706" y="66.04" rot="R270"/>
-<element name="JTAG_RST" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="" x="58.42" y="63.246" rot="MR0"/>
-<element name="TST" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="" x="59.436" y="44.45" rot="MR180"/>
-<element name="JTAGSEL" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="" x="53.086" y="52.578" rot="MR90"/>
-<element name="ERASE" library="SparkFun-Passives" package="PAD-JUMPER-2-NO_YES_SILK" value="" x="50.292" y="52.578" rot="MR90"/>
-<element name="U3" library="MAX11300" package="TQFN40" value="MAX11300GTL" x="61.976" y="38.354" rot="R270"/>
-<element name="C21" library="resistor" package="C0603" value="4u7" x="60.452" y="40.132" rot="MR180"/>
-<element name="C27" library="resistor" package="C0603" value="4u7" x="60.452" y="36.83" rot="MR180"/>
-<element name="D4" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="55.626"/>
-<element name="D5" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="51.816"/>
-<element name="D6" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="48.006"/>
-<element name="D7" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="44.196"/>
-<element name="D8" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="40.386"/>
-<element name="D9" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="36.576"/>
-<element name="D10" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="32.766"/>
-<element name="D11" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="28.956"/>
-<element name="D12" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="25.146"/>
-<element name="D13" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="21.336"/>
-<element name="F3" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="49.53"/>
-<element name="F4" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="49.53" rot="MR180"/>
-<element name="F5" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="46.99"/>
-<element name="F6" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="46.99" rot="MR180"/>
-<element name="F7" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="44.45"/>
-<element name="F8" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="44.45" rot="MR180"/>
-<element name="F9" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="41.91"/>
-<element name="F10" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="41.91" rot="MR180"/>
-<element name="F11" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="39.37"/>
-<element name="F12" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="39.37" rot="MR180"/>
-<element name="F13" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="36.83"/>
-<element name="F14" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="36.83" rot="MR180"/>
-<element name="F15" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="34.29"/>
-<element name="F16" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="34.29" rot="MR180"/>
-<element name="F17" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="31.75"/>
-<element name="F18" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="31.75" rot="MR180"/>
-<element name="F19" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="29.21"/>
-<element name="F20" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="29.21" rot="MR180"/>
-<element name="F21" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="26.67"/>
-<element name="F22" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="26.67" rot="MR180"/>
+<element name="USB-IN" library="adafruit" package="USB-MINIB" value="" x="4.572" y="61.214" rot="R270">
+<attribute name="PARTNO" value="20236" x="4.572" y="61.214" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="U1" library="logos-headers" package="MICRO-SD-SOCKET-PP" value="USD-SOCKETNEW" x="15.24" y="22.86" rot="R90">
+<attribute name="PARTNO" value="502570-0893" x="15.24" y="22.86" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="D1" library="logos-diodes" package="SOT26" value="SD103ASDM" x="9.652" y="28.956" rot="R90">
+<attribute name="PARTNO" value="SD103ASDM-7" x="9.652" y="28.956" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R2" library="res-cap-arrays" package="CTS742C083-RES" value="100R" x="7.366" y="25.4" rot="R90">
+<attribute name="PARTNO" value="742C083101JPTR" x="7.366" y="25.4" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="D2" library="logos-diodes" package="SOT26" value="SD103ASDM" x="5.08" y="28.956" rot="R90">
+<attribute name="PARTNO" value="SD103ASDM-7" x="5.08" y="28.956" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C1" library="resistor" package="C0603" value="33p" x="10.414" y="25.4" rot="R270">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="10.414" y="25.4" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C2" library="resistor" package="C0603" value="33p" x="5.08" y="32.004" rot="R180">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="5.08" y="32.004" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C3" library="resistor" package="C0603" value="33p" x="2.032" y="28.956" rot="R90">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="2.032" y="28.956" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="ACC" library="pinhead-1" package="2X05" value="" x="49.022" y="66.04">
+<attribute name="PARTNO" value="*" x="49.022" y="66.04" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R3" library="resistor" package="R0603" value="27R" x="12.7" y="60.706">
+<attribute name="PARTNO" value="CRCW060327R0FKEA" x="12.7" y="60.706" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R4" library="resistor" package="R0603" value="27R" x="12.7" y="62.484">
+<attribute name="PARTNO" value="CRCW060327R0FKEA" x="12.7" y="62.484" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C4" library="resistor" package="C0603" value="33p" x="12.7" y="64.008">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="12.7" y="64.008" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C5" library="resistor" package="C0603" value="33p" x="12.7" y="58.928">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="12.7" y="58.928" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R5" library="resistor" package="R0603" value="1K5" x="12.7" y="57.15">
+<attribute name="PARTNO" value="ERJ-3GEYJ152V" x="12.7" y="57.15" size="1.778" layer="27" display="off"/>
+</element>
+<element name="L1" library="SparkFun-Passives" package="0805" value="ferrite" x="12.7" y="65.786">
+<attribute name="PARTNO" value="MI0805K400R-10" x="12.7" y="65.786" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D3" library="logos-diodes" package="SOT26" value="SD103ASDM" x="17.78" y="60.198" rot="R270">
+<attribute name="PARTNO" value="SD103ASDM-7" x="17.78" y="60.198" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R6" library="res-cap-arrays" package="CTS742C083-RES" value="100R" x="51.562" y="61.722" rot="R270">
+<attribute name="PARTNO" value="742C083101JPTR" x="51.562" y="61.722" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R7" library="res-cap-arrays" package="CTS742C083-RES" value="100R" x="46.482" y="61.722" rot="R90">
+<attribute name="PARTNO" value="742C083101JPTR" x="46.482" y="61.722" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C6" library="resistor" package="C0603" value="10n" x="12.7" y="67.564">
+<attribute name="PARTNO" value="CL10B103KB8NCNC" x="12.7" y="67.564" size="1.778" layer="27" display="off"/>
+</element>
+<element name="U2" library="atmel-sam3s" package="QFN48" value="SAM3SA-MU" x="50.8" y="44.704">
+<attribute name="PARTNO" value="ATSAM3S4AA-MU" x="50.8" y="44.704" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C9" library="resistor" package="C0603" value="100n" x="38.862" y="43.688" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="38.862" y="43.688" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C12" library="resistor" package="C0603" value="100n" x="48.514" y="48.26" rot="MR270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="48.514" y="48.26" size="1.778" layer="28" rot="MR270" display="off"/>
+</element>
+<element name="C13" library="resistor" package="C0603" value="100n" x="46.736" y="48.26" rot="MR90">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="46.736" y="48.26" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="C14" library="resistor" package="C0603" value="100n" x="48.006" y="38.862" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="48.006" y="38.862" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C15" library="resistor" package="C0603" value="100n" x="57.404" y="46.228">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="57.404" y="46.228" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C16" library="resistor" package="C0603" value="4u7" x="45.212" y="46.736" rot="R90">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="45.212" y="46.736" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C17" library="resistor" package="C0603" value="4u7" x="45.212" y="43.688" rot="R270">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="45.212" y="43.688" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C19" library="resistor" package="C0603" value="100n" x="42.164" y="50.546" rot="R180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="42.164" y="50.546" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C20" library="resistor" package="C0603" value="100n" x="47.244" y="43.942" rot="MR180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="47.244" y="43.942" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="C22" library="resistor" package="C0603" value="100n" x="50.546" y="41.148" rot="MR90">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="50.546" y="41.148" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="C23" library="resistor" package="C0603" value="2u2" x="42.164" y="40.132" rot="R180">
+<attribute name="PARTNO" value="C1608X7R1A225K" x="42.164" y="40.132" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="L2" library="SparkFun-Passives" package="INDUCTOR-1206" value="10u" x="42.164" y="45.212" rot="R90">
+<attribute name="PARTNO" value="LQH31CN100K03L" x="42.164" y="45.212" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C24" library="resistor" package="C0603" value="4u7" x="42.164" y="55.88" rot="R180">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="42.164" y="55.88" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C25" library="resistor" package="C0603" value="100n" x="42.164" y="52.324" rot="R180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="42.164" y="52.324" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="R8" library="resistor" package="R0603" value="1R" x="42.164" y="54.102">
+<attribute name="PARTNO" value="ERJ-3GEYJ1R0V" x="42.164" y="54.102" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C26" library="resistor" package="C0603" value="100n" x="51.562" y="48.26" rot="MR270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="51.562" y="48.26" size="1.778" layer="28" rot="MR270" display="off"/>
+</element>
+<element name="C18" library="resistor" package="C0603" value="10u" x="38.862" y="46.736" rot="R90">
+<attribute name="PARTNO" value="EMK107BBJ106MA-T" x="38.862" y="46.736" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="H1" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="82.55" y="72.39">
+<attribute name="PARTNO" value="*" x="82.55" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="BOM" value="EXCLUDE" x="82.55" y="72.39" size="1.778" layer="27" display="off"/>
+</element>
+<element name="H2" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="82.55" y="3.81">
+<attribute name="PARTNO" value="*" x="82.55" y="3.81" size="1.778" layer="27" display="off"/>
+<attribute name="BOM" value="EXCLUDE" x="82.55" y="3.81" size="1.778" layer="27" display="off"/>
+</element>
+<element name="H3" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="3.81" y="3.81">
+<attribute name="PARTNO" value="*" x="3.81" y="3.81" size="1.778" layer="27" display="off"/>
+<attribute name="BOM" value="EXCLUDE" x="3.81" y="3.81" size="1.778" layer="27" display="off"/>
+</element>
+<element name="H4" library="holes" package="3,2-PAD" value="MOUNT-PAD-ROUND3.2" x="3.81" y="72.39">
+<attribute name="PARTNO" value="*" x="3.81" y="72.39" size="1.778" layer="27" display="off"/>
+<attribute name="BOM" value="EXCLUDE" x="3.81" y="72.39" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F1" library="adafruit" package="R1206" value="500 mA" x="17.78" y="65.786">
+<attribute name="PARTNO" value="1206L050/15YR" x="17.78" y="65.786" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R9" library="resistor" package="R0603" value="10K" x="17.78" y="70.104">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="17.78" y="70.104" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C7" library="resistor" package="C1206" value="10u" x="17.78" y="68.072" rot="R180">
+<attribute name="PARTNO" value="C3216X5R1E106M" x="17.78" y="68.072" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C8" library="resistor" package="C1206" value="10u" x="17.78" y="63.5" rot="R180">
+<attribute name="PARTNO" value="C3216X5R1E106M" x="17.78" y="63.5" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="F2" library="adafruit" package="R1206" value="1000 mA" x="12.446" y="45.72">
+<attribute name="PARTNO" value="0ZCJ0100FF2E" x="12.446" y="45.72" size="1.778" layer="27" display="off"/>
+</element>
+<element name="JP1" library="MultiSpork-parts" package="PINHEAD_2X05_127" value="" x="60.706" y="66.04" rot="R270">
+<attribute name="PARTNO" value="M50-3500542" x="60.706" y="66.04" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="JTAG_RST" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="" x="58.42" y="63.246" rot="MR0">
+<attribute name="BOM" value="EXCLUDE" x="58.42" y="63.246" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="TST" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="" x="59.436" y="44.45" rot="MR180">
+<attribute name="BOM" value="EXCLUDE" x="59.436" y="44.45" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="JTAGSEL" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="" x="53.086" y="52.578" rot="MR90">
+<attribute name="BOM" value="EXCLUDE" x="53.086" y="52.578" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="ERASE" library="SparkFun-Passives" package="PAD-JUMPER-2-NO_YES_SILK" value="" x="50.292" y="52.578" rot="MR90">
+<attribute name="BOM" value="EXCLUDE" x="50.292" y="52.578" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="U3" library="MAX11300" package="TQFN40" value="MAX11300GTL" x="61.976" y="38.354" rot="R270">
+<attribute name="PARTNO" value="MAX11300GTL+" x="61.976" y="38.354" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C21" library="resistor" package="C0603" value="4u7" x="60.452" y="40.132" rot="MR180">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="60.452" y="40.132" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="C27" library="resistor" package="C0603" value="4u7" x="60.452" y="36.83" rot="MR180">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="60.452" y="36.83" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="D4" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="55.626">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="55.626" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D5" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="51.816">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="51.816" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D6" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="48.006">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="48.006" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D7" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="44.196">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="44.196" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D8" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="40.386">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="40.386" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D9" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="36.576">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="36.576" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D10" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="32.766">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="32.766" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D11" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="28.956">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="28.956" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D12" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="25.146">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="25.146" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D13" library="logos-diodes" package="SOT26" value="SD103ASDM" x="72.39" y="21.336">
+<attribute name="PARTNO" value="SD103ASDM-7" x="72.39" y="21.336" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F3" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="49.53">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="49.53" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F4" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="49.53" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="49.53" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F5" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="46.99">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="46.99" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F6" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="46.99" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="46.99" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F7" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="44.45">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="44.45" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F8" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="44.45" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="44.45" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F9" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="41.91">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="41.91" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F10" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="41.91" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="41.91" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F11" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="39.37">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="39.37" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F12" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="39.37" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="39.37" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F13" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="36.83">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="36.83" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F14" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="36.83" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="36.83" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F15" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="34.29">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="34.29" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F16" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="34.29" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="34.29" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F17" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="31.75">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="31.75" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F18" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="31.75" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="31.75" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F19" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="29.21">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="29.21" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F20" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="29.21" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="29.21" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="F21" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="26.67">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="26.67" size="1.778" layer="27" display="off"/>
+</element>
+<element name="F22" library="SparkFun-PowerIC" package="0603" value="" x="77.978" y="26.67" rot="MR180">
+<attribute name="PARTNO" value="femtoSMDC008F-02" x="77.978" y="26.67" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
 <element name="BAT" library="SparkFun" package="S2B-PH" value="" x="3.81" y="38.1" rot="R90">
 <attribute name="PARTNO" value="S2B-PH-SM4-TB(LF)(SN)" x="-7.62" y="29.21" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -2961,143 +3133,374 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="PARTNO" value="TP13" x="26.416" y="25.146" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="BOM" value="EXCLUDE" x="26.416" y="25.146" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="C10" library="resistor" package="C0603" value="100n" x="60.452" y="31.242" rot="R180"/>
-<element name="C11" library="resistor" package="C0603" value="1u" x="60.452" y="33.02" rot="R180"/>
-<element name="C29" library="resistor" package="C0603" value="100n" x="60.452" y="45.72"/>
-<element name="C30" library="resistor" package="C0603" value="1u" x="60.452" y="43.7515"/>
-<element name="C31" library="resistor" package="C0603" value="100n" x="64.008" y="43.688"/>
-<element name="C32" library="resistor" package="C0603" value="1u" x="64.008" y="45.72"/>
-<element name="C33" library="resistor" package="C0603" value="100n" x="64.008" y="33.02" rot="R180"/>
-<element name="C34" library="resistor" package="C0603" value="1u" x="64.008" y="31.242" rot="R180"/>
-<element name="Q1" library="logos-crystals" package="CSM-3X" value="" x="49.022" y="52.578" rot="R180"/>
-<element name="C35" library="resistor" package="C0603" value="" x="46.228" y="56.134" rot="R180"/>
-<element name="C36" library="resistor" package="C0603" value="" x="52.07" y="56.134"/>
+<element name="C10" library="resistor" package="C0603" value="100n" x="60.452" y="31.242" rot="R180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="60.452" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C11" library="resistor" package="C0603" value="1u" x="60.452" y="33.02" rot="R180">
+<attribute name="PARTNO" value="UMK107BJ105KA-T" x="60.452" y="33.02" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C29" library="resistor" package="C0603" value="100n" x="60.452" y="45.72">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="60.452" y="45.72" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C30" library="resistor" package="C0603" value="1u" x="60.452" y="43.7515">
+<attribute name="PARTNO" value="UMK107BJ105KA-T" x="60.452" y="43.7515" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C31" library="resistor" package="C0603" value="100n" x="64.008" y="43.688">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="64.008" y="43.688" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C32" library="resistor" package="C0603" value="1u" x="64.008" y="45.72">
+<attribute name="PARTNO" value="UMK107BJ105KA-T" x="64.008" y="45.72" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C33" library="resistor" package="C0603" value="100n" x="64.008" y="33.02" rot="R180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="64.008" y="33.02" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C34" library="resistor" package="C0603" value="1u" x="64.008" y="31.242" rot="R180">
+<attribute name="PARTNO" value="UMK107BJ105KA-T" x="64.008" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="Q1" library="logos-crystals" package="CSM-3X" value="20 MHz" x="49.022" y="52.578" rot="R180">
+<attribute name="PARTNO" value="ECS-200-20-3X-TR" x="49.022" y="52.578" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C35" library="resistor" package="C0603" value="33p" x="46.228" y="56.134" rot="R180">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="46.228" y="56.134" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C36" library="resistor" package="C0603" value="33p" x="52.07" y="56.134">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="52.07" y="56.134" size="1.778" layer="27" display="off"/>
+</element>
 <element name="D15" library="diode" package="SMB" value="" x="12.7" y="51.816" rot="R180">
 <attribute name="PARTNO" value="LSM115JE3" x="12.7" y="51.816" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U4" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="28.702" y="67.31"/>
-<element name="C37" library="resistor" package="C1210" value="" x="23.114" y="61.214" rot="R270"/>
-<element name="C38" library="resistor" package="C0603" value="" x="24.13" y="67.31" rot="R270"/>
-<element name="C39" library="resistor" package="C0603" value="" x="33.274" y="67.31" rot="R270"/>
-<element name="R1" library="resistor" package="R0603" value="" x="22.352" y="67.31" rot="R90"/>
-<element name="R14" library="resistor" package="R0603" value="" x="25.908" y="67.31" rot="R90"/>
-<element name="R15" library="resistor" package="R0603" value="" x="31.496" y="67.31" rot="R90"/>
-<element name="C40" library="resistor" package="C1210" value="" x="38.1" y="66.04" rot="R90"/>
-<element name="C41" library="resistor" package="C1210" value="" x="38.1" y="60.706" rot="R270"/>
-<element name="D16" library="adafruit" package="SMADIODE" value="" x="34.544" y="60.96" rot="R90">
-<attribute name="PARTNO" value="LSM115JE3" x="34.544" y="60.96" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="U4" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="28.702" y="67.31">
+<attribute name="PARTNO" value="LT3580EMS8E#PBF" x="28.702" y="67.31" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L3" library="logos-inductors" package="L2323" value="L-US2323" x="28.702" y="60.96"/>
-<element name="U5" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="25.4" y="54.61"/>
-<element name="C42" library="resistor" package="C1210" value="" x="20.32" y="49.784" rot="R180"/>
-<element name="C43" library="resistor" package="C0603" value="" x="22.606" y="54.61" rot="R270"/>
-<element name="C44" library="resistor" package="C0603" value="" x="29.972" y="54.61" rot="R90"/>
-<element name="R16" library="resistor" package="R0603" value="" x="20.828" y="54.61" rot="R90"/>
-<element name="R17" library="resistor" package="R0603" value="" x="19.05" y="54.61" rot="R90"/>
-<element name="R18" library="resistor" package="R0603" value="" x="28.194" y="54.61" rot="R90"/>
-<element name="C45" library="resistor" package="C1210" value="" x="30.48" y="49.784"/>
+<element name="C37" library="resistor" package="C1210" value="4u7" x="23.114" y="61.214" rot="R270">
+<attribute name="PARTNO" value="TMK325B7475KN-T" x="23.114" y="61.214" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C38" library="resistor" package="C0603" value="100n" x="24.13" y="67.31" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="24.13" y="67.31" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C39" library="resistor" package="C0603" value="2n2" x="33.274" y="67.31" rot="R270">
+<attribute name="PARTNO" value="VJ0603Y222KXACW1BC" x="33.274" y="67.31" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R1" library="resistor" package="R0603" value="47K" x="22.352" y="67.31" rot="R90">
+<attribute name="PARTNO" value="MCT06030C4702FP500" x="22.352" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R14" library="resistor" package="R0603" value="105K" x="25.908" y="67.31" rot="R90">
+<attribute name="PARTNO" value="CRCW0603105KFKEA" x="25.908" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R15" library="resistor" package="R0603" value="10K" x="31.496" y="67.31" rot="R90">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="31.496" y="67.31" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C40" library="resistor" package="C1210" value="10u" x="38.1" y="66.04" rot="R90">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="38.1" y="66.04" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C41" library="resistor" package="C1210" value="10u" x="38.1" y="60.706" rot="R270">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="38.1" y="60.706" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D16" library="adafruit" package="SMADIODE" value="2A/40V" x="34.544" y="60.96" rot="R90">
+<attribute name="PARTNO" value="CD214A-B240LLF" x="34.544" y="60.96" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="L3" library="logos-inductors" package="L2323" value="3u9" x="28.702" y="60.96">
+<attribute name="PARTNO" value="SRR5018-3R9Y" x="28.702" y="60.96" size="1.778" layer="27" display="off"/>
+</element>
+<element name="U5" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="25.4" y="54.61">
+<attribute name="PARTNO" value="LT3580EMS8E#PBF" x="25.4" y="54.61" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C42" library="resistor" package="C1210" value="4u7" x="20.32" y="49.784" rot="R180">
+<attribute name="PARTNO" value="TMK325B7475KN-T" x="20.32" y="49.784" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C43" library="resistor" package="C0603" value="100n" x="22.606" y="54.61" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="22.606" y="54.61" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C44" library="resistor" package="C0603" value="1n" x="29.972" y="54.61" rot="R90">
+<attribute name="PARTNO" value="UMK107SD102KA-T" x="29.972" y="54.61" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R16" library="resistor" package="R0603" value="47K" x="20.828" y="54.61" rot="R90">
+<attribute name="PARTNO" value="MCT06030C4702FP500" x="20.828" y="54.61" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R17" library="resistor" package="R0603" value="45K3" x="19.05" y="54.61" rot="R90">
+<attribute name="PARTNO" value="CRCW060345K3FKEA" x="19.05" y="54.61" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R18" library="resistor" package="R0603" value="10K" x="28.194" y="54.61" rot="R90">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="28.194" y="54.61" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C45" library="resistor" package="C1210" value="1u" x="30.48" y="49.784">
+<attribute name="PARTNO" value="TMK325B7105KD-T" x="30.48" y="49.784" size="1.778" layer="27" display="off"/>
+</element>
 <element name="D17" library="adafruit" package="SOD-123" value="" x="30.48" y="45.72">
-<attribute name="PARTNO" value="LSM115JE3" x="24.13" y="3.81" size="1.778" layer="27" display="off"/>
+<attribute name="PARTNO" value="PMEG3020ER,115" x="24.13" y="3.81" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L4" library="logos-inductors" package="L1008" value="L-US1008" x="25.4" y="49.784"/>
-<element name="L5" library="logos-inductors" package="L1008" value="L-US1008" x="35.052" y="49.784"/>
-<element name="C47" library="resistor" package="C0603" value="" x="31.75" y="54.61" rot="R90"/>
-<element name="U6" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="25.4" y="40.64"/>
-<element name="C48" library="resistor" package="C1210" value="" x="20.32" y="35.814" rot="R180"/>
-<element name="C49" library="resistor" package="C0603" value="" x="22.606" y="40.64" rot="R270"/>
-<element name="C50" library="resistor" package="C0603" value="" x="29.972" y="40.64" rot="R90"/>
-<element name="R19" library="resistor" package="R0603" value="" x="20.828" y="40.64" rot="R90"/>
-<element name="R20" library="resistor" package="R0603" value="" x="19.05" y="40.64" rot="R90"/>
-<element name="R21" library="resistor" package="R0603" value="" x="28.194" y="40.64" rot="R90"/>
-<element name="C51" library="resistor" package="C1210" value="" x="30.48" y="35.814"/>
-<element name="D18" library="adafruit" package="SMADIODE" value="" x="32.512" y="32.004">
-<attribute name="PARTNO" value="LSM115JE3" x="19.812" y="-9.906" size="1.778" layer="27" display="off"/>
+<element name="L4" library="logos-inductors" package="L1008" value="2u2" x="25.4" y="49.784">
+<attribute name="PARTNO" value="252012CDMCDS-2R2MC" x="25.4" y="49.784" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L6" library="logos-inductors" package="L1008" value="L-US1008" x="25.4" y="35.814"/>
-<element name="L7" library="logos-inductors" package="L1008" value="L-US1008" x="35.052" y="35.814"/>
-<element name="C53" library="resistor" package="C0603" value="" x="31.75" y="40.64" rot="R90"/>
-<element name="U8" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="25.4" y="26.924"/>
-<element name="C54" library="resistor" package="C1210" value="" x="19.304" y="22.098" rot="R180"/>
-<element name="C55" library="resistor" package="C0603" value="" x="22.606" y="26.924" rot="R270"/>
-<element name="C56" library="resistor" package="C0603" value="" x="29.972" y="26.924" rot="R90"/>
-<element name="R22" library="resistor" package="R0603" value="" x="20.828" y="26.924" rot="R90"/>
-<element name="R23" library="resistor" package="R0603" value="" x="19.05" y="26.924" rot="R90"/>
-<element name="R24" library="resistor" package="R0603" value="" x="28.194" y="26.924" rot="R90"/>
-<element name="C57" library="resistor" package="C1210" value="" x="31.242" y="15.24"/>
-<element name="C58" library="resistor" package="C1210" value="" x="31.242" y="21.844"/>
-<element name="D19" library="adafruit" package="SMADIODE" value="" x="35.56" y="18.034" rot="R90">
-<attribute name="PARTNO" value="LSM115JE3" x="77.47" y="5.334" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="L5" library="logos-inductors" package="L1008" value="2u2" x="35.052" y="49.784">
+<attribute name="PARTNO" value="252012CDMCDS-2R2MC" x="35.052" y="49.784" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L8" library="logos-inductors" package="L2323" value="L-US2323" x="25.4" y="20.32"/>
-<element name="L9" library="logos-inductors" package="L1008" value="L-US1008" x="31.242" y="18.542"/>
-<element name="C59" library="resistor" package="C0603" value="" x="31.75" y="26.924" rot="R90"/>
-<element name="C60" library="resistor" package="C1210" value="" x="31.242" y="11.938"/>
-<element name="C46" library="resistor" package="C1210" value="" x="20.32" y="45.72" rot="R180"/>
-<element name="C61" library="resistor" package="C1210" value="" x="25.4" y="45.72"/>
-<element name="C52" library="resistor" package="C1210" value="" x="20.32" y="32.004" rot="R180"/>
-<element name="C62" library="resistor" package="C1210" value="" x="25.4" y="32.004"/>
-<element name="U9" library="CC3100" package="QFN64" value="CC3100" x="45.974" y="17.018"/>
-<element name="C63" library="resistor" package="C0603" value="100n" x="45.466" y="27.178" rot="R90"/>
-<element name="C64" library="resistor" package="C0603" value="4u7" x="50.292" y="18.796" rot="MR0"/>
-<element name="C65" library="resistor" package="C0603" value="4u7" x="50.292" y="16.51" rot="MR0"/>
-<element name="C66" library="resistor" package="C0603" value="4u7" x="50.292" y="14.732" rot="MR0"/>
-<element name="C67" library="resistor" package="C0603" value="100n" x="39.116" y="16.0655" rot="R180"/>
-<element name="L10" library="SparkFun-Passives" package="INDUCTOR-1206" value="2u2" x="61.722" y="10.668"/>
-<element name="C68" library="resistor" package="C0603" value="10u" x="63.246" y="7.366"/>
-<element name="C69" library="resistor" package="C0603" value="100n" x="60.198" y="7.366" rot="R180"/>
-<element name="C70" library="resistor" package="C0603" value="100n" x="44.45" y="6.35" rot="R270"/>
-<element name="C71" library="resistor" package="C0603" value="100n" x="46.228" y="12.7" rot="MR90"/>
-<element name="L11" library="SparkFun-Passives" package="INDUCTOR-1206" value="1u" x="61.722" y="15.494"/>
-<element name="L12" library="SparkFun-Passives" package="INDUCTOR-1206" value="2u2" x="61.722" y="20.32" rot="R180"/>
-<element name="C72" library="resistor" package="C0603" value="10u" x="61.722" y="23.622" rot="R180"/>
-<element name="C73" library="resistor" package="C0603" value="100n" x="41.656" y="17.272" rot="MR180"/>
-<element name="C74" library="resistor" package="C0603" value="100n" x="46.228" y="21.336" rot="MR270"/>
-<element name="C75" library="resistor" package="C0603" value="100n" x="50.292" y="21.082" rot="MR180"/>
-<element name="C76" library="resistor" package="C0603" value="100n" x="42.672" y="6.35" rot="R270"/>
-<element name="C77" library="resistor" package="C0603" value="100n" x="56.134" y="9.398" rot="R270"/>
-<element name="C78" library="resistor" package="C1206" value="22u" x="54.61" y="18.542"/>
-<element name="C79" library="resistor" package="C1206" value="22u" x="54.61" y="12.446"/>
-<element name="JP2" library="pinhead" package="1X06" value="" x="67.564" y="14.478" rot="R270"/>
-<element name="R25" library="resistor" package="R0603" value="10K" x="39.878" y="11.938"/>
-<element name="R26" library="resistor" package="R0603" value="100K" x="39.116" y="18.034"/>
-<element name="R27" library="resistor" package="R0603" value="100K" x="54.356" y="9.398" rot="R270"/>
-<element name="R28" library="resistor" package="R0603" value="100K" x="41.656" y="23.622" rot="R90"/>
-<element name="C80" library="resistor" package="C0603" value="100n" x="52.2605" y="9.398" rot="R270"/>
-<element name="R29" library="resistor" package="R0603" value="4K7" x="54.61" y="59.182"/>
-<element name="R30" library="resistor" package="R0603" value="4K7" x="51.562" y="59.182" rot="R180"/>
-<element name="R31" library="resistor" package="R0603" value="100K" x="41.656" y="19.05" rot="MR0"/>
-<element name="R32" library="resistor" package="R0603" value="10K" x="44.196" y="12.7" rot="MR270"/>
-<element name="R33" library="resistor" package="R0603" value="100K" x="50.292" y="11.176" rot="MR180"/>
-<element name="R34" library="resistor" package="R0603" value="100K" x="50.292" y="12.954" rot="MR180"/>
-<element name="JP3" library="pinhead" package="1X04" value="" x="71.628" y="11.938" rot="R90"/>
-<element name="R35" library="resistor" package="R0603" value="100K" x="41.656" y="20.828" rot="MR0"/>
-<element name="Q2" library="logos-crystals" package="ECX-31B" value="32.768 kHz" x="48.514" y="24.384"/>
-<element name="Q3" library="logos-crystals" package="CSM-3X" value="40 MHz" x="37.084" y="7.366" rot="R270"/>
-<element name="C81" library="resistor" package="C0603" value="" x="33.274" y="8.636" rot="R270"/>
-<element name="C82" library="resistor" package="C0603" value="" x="33.274" y="5.588" rot="R90"/>
-<element name="C83" library="resistor" package="C0603" value="" x="47.244" y="27.178" rot="R90"/>
-<element name="C84" library="resistor" package="C0603" value="" x="49.784" y="27.178" rot="R90"/>
-<element name="R36" library="resistor" package="R0603" value="" x="62.992" y="68.58" rot="R180"/>
-<element name="RESET" library="switch" package="SKHMPXE010" value="SKHMPSE010" x="59.69" y="52.832" rot="R90"/>
-<element name="U10" library="CC3100" package="SOIC8" value="M25PX80" x="23.368" y="11.684" rot="R90"/>
-<element name="R37" library="resistor" package="R0603" value="100K" x="20.574" y="16.51" rot="R270"/>
-<element name="R38" library="resistor" package="R0603" value="100K" x="18.796" y="16.51" rot="R270"/>
-<element name="C85" library="resistor" package="C0603" value="100n" x="17.018" y="16.51" rot="R90"/>
-<element name="R39" library="resistor" package="R0603" value="100K" x="23.114" y="7.874" rot="R180"/>
-<element name="FL1" library="CC3100" package="DEA202450BT" value="DEA202450BT" x="49.276" y="10.414" rot="R180"/>
-<element name="C86" library="resistor" package="CT6032" value="100u" x="42.418" y="35.814" rot="R180"/>
-<element name="C87" library="resistor" package="CT6032" value="100u" x="42.418" y="32.004" rot="R180"/>
+<element name="C47" library="resistor" package="C0603" value="22p" x="31.75" y="54.61" rot="R90">
+<attribute name="PARTNO" value="GQM1885C1H220JB01D" x="31.75" y="54.61" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="U6" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="25.4" y="40.64">
+<attribute name="PARTNO" value="LT3580EMS8E#PBF" x="25.4" y="40.64" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C48" library="resistor" package="C1210" value="4u7" x="20.32" y="35.814" rot="R180">
+<attribute name="PARTNO" value="TMK325B7475KN-T" x="20.32" y="35.814" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C49" library="resistor" package="C0603" value="100n" x="22.606" y="40.64" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="22.606" y="40.64" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C50" library="resistor" package="C0603" value="1n" x="29.972" y="40.64" rot="R90">
+<attribute name="PARTNO" value="UMK107SD102KA-T" x="29.972" y="40.64" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R19" library="resistor" package="R0603" value="47K" x="20.828" y="40.64" rot="R90">
+<attribute name="PARTNO" value="MCT06030C4702FP500" x="20.828" y="40.64" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R20" library="resistor" package="R0603" value="24K" x="19.05" y="40.64" rot="R90">
+<attribute name="PARTNO" value="CRCW060324K0FKEA" x="19.05" y="40.64" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R21" library="resistor" package="R0603" value="10K" x="28.194" y="40.64" rot="R90">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="28.194" y="40.64" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C51" library="resistor" package="C1210" value="1u" x="30.48" y="35.814">
+<attribute name="PARTNO" value="TMK325B7105KD-T" x="30.48" y="35.814" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D18" library="adafruit" package="SMADIODE" value="2A/40V" x="32.512" y="32.004">
+<attribute name="PARTNO" value="CD214A-B240LLF" x="19.812" y="-9.906" size="1.778" layer="27" display="off"/>
+</element>
+<element name="L6" library="logos-inductors" package="L1008" value="2u2" x="25.4" y="35.814">
+<attribute name="PARTNO" value="252012CDMCDS-2R2MC" x="25.4" y="35.814" size="1.778" layer="27" display="off"/>
+</element>
+<element name="L7" library="logos-inductors" package="L1008" value="2u2" x="35.052" y="35.814">
+<attribute name="PARTNO" value="252012CDMCDS-2R2MC" x="35.052" y="35.814" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C53" library="resistor" package="C0603" value="22p" x="31.75" y="40.64" rot="R90">
+<attribute name="PARTNO" value="GQM1885C1H220JB01D" x="31.75" y="40.64" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="U8" library="MultiSpork-parts" package="MSOP8" value="LT3580EMS8E" x="25.4" y="26.924">
+<attribute name="PARTNO" value="LT3580EMS8E#PBF" x="25.4" y="26.924" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C54" library="resistor" package="C1210" value="4u7" x="19.304" y="22.098" rot="R180">
+<attribute name="PARTNO" value="TMK325B7475KN-T" x="19.304" y="22.098" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C55" library="resistor" package="C0603" value="100n" x="22.606" y="26.924" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="22.606" y="26.924" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C56" library="resistor" package="C0603" value="2n2" x="29.972" y="26.924" rot="R90">
+<attribute name="PARTNO" value="VJ0603Y222KXACW1BC" x="29.972" y="26.924" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R22" library="resistor" package="R0603" value="47K" x="20.828" y="26.924" rot="R90">
+<attribute name="PARTNO" value="MCT06030C4702FP500" x="20.828" y="26.924" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R23" library="resistor" package="R0603" value="120K" x="19.05" y="26.924" rot="R90">
+<attribute name="PARTNO" value="AF0603FR-07120KL" x="19.05" y="26.924" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R24" library="resistor" package="R0603" value="10K" x="28.194" y="26.924" rot="R90">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="28.194" y="26.924" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C57" library="resistor" package="C1210" value="10u" x="31.242" y="15.24">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="31.242" y="15.24" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C58" library="resistor" package="C1210" value="1u" x="31.242" y="21.844">
+<attribute name="PARTNO" value="TMK325B7105KD-T" x="31.242" y="21.844" size="1.778" layer="27" display="off"/>
+</element>
+<element name="D19" library="adafruit" package="SMADIODE" value="2A/40V" x="35.56" y="18.034" rot="R90">
+<attribute name="PARTNO" value="CD214A-B240LLF" x="77.47" y="5.334" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="L8" library="logos-inductors" package="L2323" value="5u3" x="25.4" y="20.32">
+<attribute name="PARTNO" value="SRR5028-5R3Y" x="25.4" y="20.32" size="1.778" layer="27" display="off"/>
+</element>
+<element name="L9" library="logos-inductors" package="L1008" value="5u6" x="31.242" y="18.542">
+<attribute name="PARTNO" value="1008 (2520 metric)" x="31.242" y="18.542" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C59" library="resistor" package="C0603" value="DNP" x="31.75" y="26.924" rot="R90">
+<attribute name="PARTNO" value="DNP" x="31.75" y="26.924" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DNP" value="T" x="31.75" y="26.924" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C60" library="resistor" package="C1210" value="10u" x="31.242" y="11.938">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="31.242" y="11.938" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C46" library="resistor" package="C1210" value="10u" x="20.32" y="45.72" rot="R180">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="20.32" y="45.72" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C61" library="resistor" package="C1210" value="10u" x="25.4" y="45.72">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="25.4" y="45.72" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C52" library="resistor" package="C1210" value="10u" x="20.32" y="32.004" rot="R180">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="20.32" y="32.004" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C62" library="resistor" package="C1210" value="10u" x="25.4" y="32.004">
+<attribute name="PARTNO" value="UMK325BJ106MM" x="25.4" y="32.004" size="1.778" layer="27" display="off"/>
+</element>
+<element name="U9" library="CC3100" package="QFN64" value="CC3100" x="45.974" y="17.018">
+<attribute name="CC3100" x="45.974" y="17.018" size="1.778" layer="27" display="off"/>
+<attribute name="PARTNO" value="CC3100" x="45.974" y="17.018" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C63" library="resistor" package="C0603" value="100n" x="45.466" y="27.178" rot="R90">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="45.466" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C64" library="resistor" package="C0603" value="4u7" x="50.292" y="18.796" rot="MR0">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="50.292" y="18.796" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="C65" library="resistor" package="C0603" value="4u7" x="50.292" y="16.51" rot="MR0">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="50.292" y="16.51" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="C66" library="resistor" package="C0603" value="4u7" x="50.292" y="14.732" rot="MR0">
+<attribute name="PARTNO" value="GRM188F51A475ZE20D" x="50.292" y="14.732" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="C67" library="resistor" package="C0603" value="100n" x="39.116" y="16.0655" rot="R180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="39.116" y="16.0655" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="L10" library="SparkFun-Passives" package="INDUCTOR-1206" value="2u2" x="61.722" y="10.668">
+<attribute name="PARTNO" value="LQM31PN2R2M00L" x="61.722" y="10.668" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C68" library="resistor" package="C0603" value="10u" x="63.246" y="7.366">
+<attribute name="PARTNO" value="EMK107BBJ106MA-T" x="63.246" y="7.366" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C69" library="resistor" package="C0603" value="100n" x="60.198" y="7.366" rot="R180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="60.198" y="7.366" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C70" library="resistor" package="C0603" value="100n" x="44.45" y="6.35" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="44.45" y="6.35" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C71" library="resistor" package="C0603" value="100n" x="46.228" y="12.7" rot="MR90">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="46.228" y="12.7" size="1.778" layer="28" rot="MR90" display="off"/>
+</element>
+<element name="L11" library="SparkFun-Passives" package="INDUCTOR-1206" value="1u" x="61.722" y="15.494">
+<attribute name="PARTNO" value="LQM31PN1R0MC0L" x="61.722" y="15.494" size="1.778" layer="27" display="off"/>
+</element>
+<element name="L12" library="SparkFun-Passives" package="INDUCTOR-1206" value="2u2" x="61.722" y="20.32" rot="R180">
+<attribute name="PARTNO" value="LQM31PN2R2M00L" x="61.722" y="20.32" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C72" library="resistor" package="C0603" value="10u" x="61.722" y="23.622" rot="R180">
+<attribute name="PARTNO" value="EMK107BBJ106MA-T" x="61.722" y="23.622" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C73" library="resistor" package="C0603" value="100n" x="41.656" y="17.272" rot="MR180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="41.656" y="17.272" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="C74" library="resistor" package="C0603" value="100n" x="46.228" y="21.336" rot="MR270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="46.228" y="21.336" size="1.778" layer="28" rot="MR270" display="off"/>
+</element>
+<element name="C75" library="resistor" package="C0603" value="100n" x="50.292" y="21.082" rot="MR180">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="50.292" y="21.082" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="C76" library="resistor" package="C0603" value="100n" x="42.672" y="6.35" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="42.672" y="6.35" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C77" library="resistor" package="C0603" value="100n" x="56.134" y="9.398" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="56.134" y="9.398" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C78" library="resistor" package="C1206" value="22u" x="54.61" y="18.542">
+<attribute name="PARTNO" value="GRM31CR61C226ME15L" x="54.61" y="18.542" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C79" library="resistor" package="C1206" value="22u" x="54.61" y="12.446">
+<attribute name="PARTNO" value="GRM31CR61C226ME15L" x="54.61" y="12.446" size="1.778" layer="27" display="off"/>
+</element>
+<element name="JP2" library="pinhead" package="1X06" value="" x="67.564" y="14.478" rot="R270">
+<attribute name="PARTNO" value="*" x="67.564" y="14.478" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R25" library="resistor" package="R0603" value="10K" x="39.878" y="11.938">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="39.878" y="11.938" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R26" library="resistor" package="R0603" value="100K" x="39.116" y="18.034">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="39.116" y="18.034" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R27" library="resistor" package="R0603" value="100K" x="54.356" y="9.398" rot="R270">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="54.356" y="9.398" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R28" library="resistor" package="R0603" value="100K" x="41.656" y="23.622" rot="R90">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="41.656" y="23.622" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C80" library="resistor" package="C0603" value="100n" x="52.2605" y="9.398" rot="R270">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="52.2605" y="9.398" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R29" library="resistor" package="R0603" value="4K7" x="54.61" y="59.182">
+<attribute name="PARTNO" value="RC1608J472CS" x="54.61" y="59.182" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R30" library="resistor" package="R0603" value="4K7" x="51.562" y="59.182" rot="R180">
+<attribute name="PARTNO" value="RC1608J472CS" x="51.562" y="59.182" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="R31" library="resistor" package="R0603" value="100K" x="41.656" y="19.05" rot="MR0">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="41.656" y="19.05" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="R32" library="resistor" package="R0603" value="10K" x="44.196" y="12.7" rot="MR270">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="44.196" y="12.7" size="1.778" layer="28" rot="MR270" display="off"/>
+</element>
+<element name="R33" library="resistor" package="R0603" value="100K" x="50.292" y="11.176" rot="MR180">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="50.292" y="11.176" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="R34" library="resistor" package="R0603" value="100K" x="50.292" y="12.954" rot="MR180">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="50.292" y="12.954" size="1.778" layer="28" rot="MR180" display="off"/>
+</element>
+<element name="JP3" library="pinhead" package="1X04" value="" x="71.628" y="11.938" rot="R90">
+<attribute name="PARTNO" value="*" x="71.628" y="11.938" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R35" library="resistor" package="R0603" value="100K" x="41.656" y="20.828" rot="MR0">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="41.656" y="20.828" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="Q2" library="logos-crystals" package="ECX-31B" value="32.768 kHz" x="48.514" y="24.384">
+<attribute name="PARTNO" value="ECS-.327-7-34B-TR" x="48.514" y="24.384" size="1.778" layer="27" display="off"/>
+</element>
+<element name="Q3" library="logos-crystals" package="CSM-3X" value="40 MHz" x="37.084" y="7.366" rot="R270">
+<attribute name="PARTNO" value="ECS-400-20-3X-EN-TR" x="37.084" y="7.366" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C81" library="resistor" package="C0603" value="33p" x="33.274" y="8.636" rot="R270">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="33.274" y="8.636" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C82" library="resistor" package="C0603" value="33p" x="33.274" y="5.588" rot="R90">
+<attribute name="PARTNO" value="VJ0603A330JXACW1BC" x="33.274" y="5.588" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C83" library="resistor" package="C0603" value="15p" x="47.244" y="27.178" rot="R90">
+<attribute name="PARTNO" value="VJ0603A150JXACW1BC" x="47.244" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C84" library="resistor" package="C0603" value="15p" x="49.784" y="27.178" rot="R90">
+<attribute name="PARTNO" value="VJ0603A150JXACW1BC" x="49.784" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R36" library="resistor" package="R0603" value="10K" x="62.992" y="68.58" rot="R180">
+<attribute name="PARTNO" value="RNCP0603FTD10K0" x="62.992" y="68.58" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="RESET" library="switch" package="SKHMPXE010" value="SKHMPSE010" x="59.69" y="52.832" rot="R90">
+<attribute name="PARTNO" value="SKHMQKE010" x="59.69" y="52.832" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="U10" library="CC3100" package="SOIC8" value="M25PX80" x="23.368" y="11.684" rot="R90">
+<attribute name="PARTNO" value="M25PX80-VMN6TP" x="23.368" y="11.684" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R37" library="resistor" package="R0603" value="100K" x="20.574" y="16.51" rot="R270">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="20.574" y="16.51" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R38" library="resistor" package="R0603" value="100K" x="18.796" y="16.51" rot="R270">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="18.796" y="16.51" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C85" library="resistor" package="C0603" value="100n" x="17.018" y="16.51" rot="R90">
+<attribute name="PARTNO" value="CC0603KRX7R9BB104" x="17.018" y="16.51" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R39" library="resistor" package="R0603" value="100K" x="23.114" y="7.874" rot="R180">
+<attribute name="PARTNO" value="CRCW0603100KFKEA" x="23.114" y="7.874" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="FL1" library="CC3100" package="DEA202450BT" value="DEA202450BT" x="49.276" y="10.414" rot="R180">
+<attribute name="PARTNO" value="DEA202450BT-7210A1" x="49.276" y="10.414" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C86" library="resistor" package="CT6032" value="100u" x="42.418" y="35.814" rot="R180">
+<attribute name="PARTNO" value="TAJC107K016RNJ" x="42.418" y="35.814" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C87" library="resistor" package="CT6032" value="100u" x="42.418" y="32.004" rot="R180">
+<attribute name="PARTNO" value="TAJC107K016RNJ" x="42.418" y="32.004" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
 <element name="Q4" library="SparkFun-DiscreteSemi" package="SOT23" value="MMBT3904" x="60.452" y="28.194">
 <attribute name="PROD_ID" value="TRANS-11160" x="60.452" y="28.194" size="1.778" layer="27" display="off"/>
+<attribute name="PARTNO" value="MMBT3904" x="60.452" y="28.194" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q5" library="SparkFun-DiscreteSemi" package="SOT23" value="MMBT3904" x="64.008" y="28.194">
 <attribute name="PROD_ID" value="TRANS-11160" x="64.008" y="28.194" size="1.778" layer="27" display="off"/>
+<attribute name="PARTNO" value="MMBT3904" x="64.008" y="28.194" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R40" library="resistor" package="R1206" value="" x="75.946" y="63.5" rot="R90"/>
+<element name="R40" library="resistor" package="R1206" value="1R" x="75.946" y="63.5" rot="R90">
+<attribute name="PARTNO" value="CRCW12061R00FKEA" x="75.946" y="63.5" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="J1" library="SparkFun-Connectors" package="U.FL" value="U.FL" x="49.276" y="6.35" rot="R90">
 <attribute name="PROD_ID" value="CONN-09193" x="49.276" y="6.35" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PARTNO" value="U.FL-R-SMT(10)" x="49.276" y="6.35" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="SW1" library="logos-switch" package="JS102011SAQN" value="JS102011SAQN" x="15.748" y="1.778"/>
+<element name="SW1" library="logos-switch" package="JS102011SAQN" value="JS102011SAQN" x="15.748" y="1.778">
+<attribute name="PARTNO" value="JS102011SAQN" x="15.748" y="1.778" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="+3V3">
