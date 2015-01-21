@@ -49,14 +49,17 @@ interface Interrupt {
 
 # write and read buffers
 interface Buffer {
-	read @0 (channel :Uint8;) -> (buf :BufStruct);
+	read @0 (buf :BufID;) -> (buf :BufStruct);
 	struct BufID {
 		channel @0 :UInt8;		# The device channel that the buffer either comes from or is intended for. 
+		bufNum @7 :Uint8;		# The buffer number (allows multiple buffers for a single channel)
 		rate @1 :Float32;		# The sample rate of the buffer. 
 		startTime @2 :UInt64;	# The start time of the buffer, in microseconds since the epoch.
-		size @3 :UInt32;		# Size of the buffer, in samples
+		size @3 :UInt32;		# Allocated size of the buffer, in samples
+		contentSize @6 :UInt32;	# The number of samples currently in the buffer
 		resolution @4 :UInt8;	# Size of a sample, in bits
 		direction @5 :Bool;		# True for input buffer, false for output
+		active @8 :Bool;		# Is the buffer currently being read from or written to?
 	}
 	struct BufStruct {
 		ID @0 :BufID;			# The identity of the buffer
@@ -74,4 +77,5 @@ interface Buffer {
 	}
 	
 	list @2 () -> (List(BufID));
+	listByChannel @3 (channel :UInt8;) -> (List(BufID));
 }
