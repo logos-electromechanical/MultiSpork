@@ -137,11 +137,15 @@ Host Mode | | Bool | | true | When true, the device functions as a WiFi access p
 
 ### Channel Configuration ###
 
+Analog input channels may be 0-22, where 0-19 are the ADC channels, 20 is the internal temperature sensors, 21 and 22 are the external temperature sensors. Analog output and all GPIO channels may be 0-19.
+
 **Name** | **GUID** | **Channels** | **Permitted Values** | **Default** |  **Function** |  
+---------|----------|--------------|----------------------|-------------|---------------|
 
 ### Trigger ###
 
 **Name** | **GUID** | **Permitted Values** | **Default** | **Function** | 
+---------|----------|----------------------|-------------|--------------|
 
 ## Interrupts ##
 
@@ -149,4 +153,13 @@ Host Mode | | Bool | | true | When true, the device functions as a WiFi access p
 
 The Multispork allocates a maximum of eight buffers -- two analog input buffers, two analog output buffers, two digital input buffers, and two digital output buffers. They are allocated dynamically in response to the configuration of the channels.
 
-**Description** | **Channels** | **Function** |
+**Description** | **Buffer Num ** | **Channels** | **Function** |
+----------------|-----------------|--------------|--------------|
+Analog Input Buffer | 0 | All channels that are configured as analog inputs | Stores samples as they are read in via ADC |
+Analog Input Buffer | 1 | All channels that are configured as analog inputs | Stores samples as they are read in via ADC | 
+Analog Output Buffer | 0 | All channels that are configured as analog outputs | Stores samples to be written out via DAC |
+Analog Output Buffer | 1 | All channels that are configured as analog outputs | Stores samples to be written out via DAC |
+Digital Input Buffer | 0 | All channels that are configured as digital inputs | Stores digital inputs as they are read in |
+Digital Input Buffer | 1 | All channels that are configured as digital inputs | Stores digital inputs as they are read in |
+Digital Output Buffer | 0 | All channels that are configured as digital outputs | Stores digital outputs to be written out |
+Digital Output Buffer | 1 | All channels that are configured as digital outputs | Stores digital outputs to be written out |
