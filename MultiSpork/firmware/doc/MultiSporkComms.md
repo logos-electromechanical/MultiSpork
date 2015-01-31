@@ -128,8 +128,12 @@ This is a list specifically of the configuration of the MultiSpork. Other device
 ### Network ###
 
 **Name** | **GUID** | **Type** | **Permitted Values** | **Default** | **Function** | 
-Device Name | | String | Any string that is permissible as an internet host name | multispork<serial number\> | This is a name to allow the user to identify different devices from a single host |
-
+---------|----------|----------|----------------------|-------------|--------------|
+Device Name | | String | Any string that is permissible as an internet host name | multispork\<serial number\> | This is a name to allow the user to identify different devices from a single host. This is also the network SSID in host mode |
+Device IP Address | | UInt32 | Any valid IP address | 10.10.10.10 | This is the IP address of the device. In client mode, this will be populated via DHCP; otherwise, it is populated from the last value stored in NVM |
+WPA2 Key | | String | Any string | none | This is the password used for logging in to the device by the host. If the device is not in host mode, it will use this password to log in to the target network. |
+Target SSID | | String | Any valid SSID | none | This is the network the device attempts to log in to in client mode |
+Host Mode | | Bool | | true | When true, the device functions as a WiFi access point. Otherwise, it attempts to log in to the network stored in Target SSID |
 
 ### Channel Configuration ###
 
