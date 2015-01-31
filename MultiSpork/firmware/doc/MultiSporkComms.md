@@ -135,17 +135,31 @@ WPA2 Key | | String | Any string | none | This is the password used for logging 
 Target SSID | | String | Any valid SSID | none | This is the network the device attempts to log in to in client mode |
 Host Mode | | Bool | | true | When true, the device functions as a WiFi access point. Otherwise, it attempts to log in to the network stored in Target SSID |
 
+### Global I/O Configuration ###
+
+These are the parameters that control all channels of a given type.
+
+**Name** | **GUID** | **Type** |**Channels Affected** | **Permitted Values** | **Default** |  **Function** |  
+---------|----------|----------|----------------------|----------------------|-------------|---------------|
+Sample Averaging | | UInt8 | All ADC | 1, 2, 4, 8, 16, 32, 64, or 128 | 1 | Set the number of samples averaged for each analog input sample transmitted to the host. |
+ADC rate | | UInt16 | All ADC | 200, 250, 333, or 400 | 200 | The base sampling rate in ksps. The delivered sampling rate is `ADC rate`/`Sample Averaging`. |
+
+
 ### Channel Configuration ###
 
 Analog input channels may be 0-22, where 0-19 are the ADC channels, 20 is the internal temperature sensors, 21 and 22 are the external temperature sensors. Analog output and all GPIO channels may be 0-19.
 
-**Name** | **GUID** | **Channels** | **Permitted Values** | **Default** |  **Function** |  
----------|----------|--------------|----------------------|-------------|---------------|
+**Name** | **GUID** | **Type** | **Channels** | **Permitted Values** | **Default** |  **Function** |  
+---------|----------|----------|--------------|----------------------|-------------|---------------|
+Channel Mode | | UInt8 | Any | 0-6, where 0 = off, 1 = single ended ADC, 2 = pseudo-differential ADC, 3 = differential ADC, 4 = DAC, 5 = GPI, 6 = GPO | 0 | Set the mode for the given channel |
+Voltage Range || UInt 8 | Any | 0-7 | 0 | See voltage range table in MAX11300 datasheet for FUNCPRM_i[11:0] |
+Digital Threshold | | UInt16 | Any channel currently in GPI mode | 0-4095 | 4095 | Sets the threshold voltage with respect to the DAC threshhold described by the Voltage Range Parameter. |
+
 
 ### Trigger ###
 
-**Name** | **GUID** | **Permitted Values** | **Default** | **Function** | 
----------|----------|----------------------|-------------|--------------|
+**Name** | **GUID** | **Type** | **Permitted Values** | **Default** | **Function** | 
+---------|----------|----------|----------------------|-------------|--------------|
 
 ## Interrupts ##
 
@@ -153,7 +167,7 @@ Analog input channels may be 0-22, where 0-19 are the ADC channels, 20 is the in
 
 The Multispork allocates a maximum of eight buffers -- two analog input buffers, two analog output buffers, two digital input buffers, and two digital output buffers. They are allocated dynamically in response to the configuration of the channels.
 
-**Description** | **Buffer Num ** | **Channels** | **Function** |
+**Description** | **Buffer Num**  | **Channels** | **Function** |
 ----------------|-----------------|--------------|--------------|
 Analog Input Buffer | 0 | All channels that are configured as analog inputs | Stores samples as they are read in via ADC |
 Analog Input Buffer | 1 | All channels that are configured as analog inputs | Stores samples as they are read in via ADC | 
