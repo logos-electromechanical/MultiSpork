@@ -144,7 +144,6 @@ These are the parameters that control all channels of a given type.
 Sample Averaging | | UInt8 | All ADC | 1, 2, 4, 8, 16, 32, 64, or 128 | 1 | Set the number of samples averaged for each analog input sample transmitted to the host. |
 ADC rate | | UInt16 | All ADC | 200, 250, 333, or 400 | 200 | The base sampling rate in ksps. The delivered sampling rate is `ADC rate`/`Sample Averaging`. |
 
-
 ### Channel Configuration ###
 
 Analog input channels may be 0-22, where 0-19 are the ADC channels, 20 is the internal temperature sensors, 21 and 22 are the external temperature sensors. Analog output and all GPIO channels may be 0-19.
@@ -163,8 +162,15 @@ DAC Voltage | | UInt16 | Any channel configured as a DAC output and with DAC Run
 
 **Name** | **GUID** | **Type** | **Permitted Values** | **Default** | **Function** | 
 ---------|----------|----------|----------------------|-------------|--------------|
+Trigger Channel | | UInt8 | 0-19 | 0 (no trigger) | Defines which channel will be used as a trigger.|
+Trigger Sweep | | UInt8 | 0-2 | 0 (auto) | Defines whether the triggering is auto (0), normal (1), or single (2). |
+Trigger Armed | | Bool | | false | When the Trigger Sweep is in single sweep mode, the host sets this true to enable the next sweep |
+
 
 ## Interrupts ##
+
+**Name** | **GUID** | **Channel(s)** | **Function** |
+---------|----------|----------------|--------------|
 
 ## Buffers ##
 
