@@ -153,8 +153,11 @@ Analog input channels may be 0-22, where 0-19 are the ADC channels, 20 is the in
 ---------|----------|----------|--------------|----------------------|-------------|---------------|
 Channel Mode | | UInt8 | Any | 0-6, where 0 = off, 1 = single ended ADC, 2 = pseudo-differential ADC, 3 = differential ADC, 4 = DAC, 5 = GPI, 6 = GPO | 0 | Set the mode for the given channel |
 Voltage Range || UInt 8 | Any | 0-7 | 0 | See voltage range table in MAX11300 datasheet for FUNCPRM_i[11:0] |
-Digital Threshold | | UInt16 | Any channel currently in GPI mode | 0-4095 | 4095 | Sets the threshold voltage with respect to the DAC threshhold described by the Voltage Range Parameter. |
-
+Digital Threshold | | UInt16 | Any channel currently in GPIO mode | 0-4095 | 4095 | Sets the threshold voltage for digital input with respect to the DAC threshhold described by the Voltage Range Parameter. In digital output mode, output voltage is 4x the digital input level |
+Negative Differential Channel | | UInt8 | 0-19 | 0 | This is the negative side for the channel while in differential or pseudod-differential mode. The target channel must be turned off. |
+Pseudo Differential Voltage | | UInt16 | Any channel currently targetted as the negative input of a pseudo-differential channel | 0-4095 | 0 | This is the negative terminal of a pseudo-differential channel. |
+DAC Running | | Bool | Any channel configured as a DAC output | | false | When this is false, the value of the DAC channel will be equal to DAC voltage, given the value of Voltage Range. |
+DAC Voltage | | UInt16 | Any channel configured as a DAC output and with DAC Running = false | 0-4095 | 0 | The voltage output of the given channel. |
 
 ### Trigger ###
 
@@ -171,8 +174,8 @@ The Multispork allocates a maximum of eight buffers -- two analog input buffers,
 ----------------|-----------------|--------------|--------------|
 Analog Input Buffer | 0 | All channels that are configured as analog inputs | Stores samples as they are read in via ADC |
 Analog Input Buffer | 1 | All channels that are configured as analog inputs | Stores samples as they are read in via ADC | 
-Analog Output Buffer | 0 | All channels that are configured as analog outputs | Stores samples to be written out via DAC |
-Analog Output Buffer | 1 | All channels that are configured as analog outputs | Stores samples to be written out via DAC |
+Analog Output Buffer | 0 | All channels that are configured as analog outputs and have the DAC Running parameter set to true. | Stores samples to be written out via DAC |
+Analog Output Buffer | 1 | All channels that are configured as analog outputs and have the DAC Running parameter set to true. | Stores samples to be written out via DAC |
 Digital Input Buffer | 0 | All channels that are configured as digital inputs | Stores digital inputs as they are read in |
 Digital Input Buffer | 1 | All channels that are configured as digital inputs | Stores digital inputs as they are read in |
 Digital Output Buffer | 0 | All channels that are configured as digital outputs | Stores digital outputs to be written out |
