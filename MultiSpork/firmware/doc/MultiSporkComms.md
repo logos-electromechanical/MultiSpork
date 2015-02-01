@@ -165,12 +165,16 @@ DAC Voltage | | UInt16 | Any channel configured as a DAC output and with DAC Run
 Trigger Channel | | UInt8 | 0-19 | 0 (no trigger) | Defines which channel will be used as a trigger.|
 Trigger Sweep | | UInt8 | 0-2 | 0 (auto) | Defines whether the triggering is auto (0), normal (1), or single (2). |
 Trigger Armed | | Bool | | false | When the Trigger Sweep is in single sweep mode, the host sets this true to enable the next sweep |
-
+Trigger Level | | Float32 | -10 to +10 | 0 | Trigger level in volts |
+Trigger Type | | UInt8 | 0-2 | 0 | 0 = edge trigger, 1 = pulse trigger, 2 = slope trigger |
+Trigger Slope | | UInt8 | 0-2 | 0 | 0 = rising, 1 = falling, 2 = either |
 
 ## Interrupts ##
 
-**Name** | **GUID** | **Channel(s)** | **Function** |
----------|----------|----------------|--------------|
+**Name** | **GUID** | **Channel** | **Function** |
+---------|----------|-------------|--------------|
+Buffer Full | | The lowest channel number in the buffer just filled | Tells the host when the device has filled a buffer |
+Trigger Tripped | | The channel of the trigger | Tells the host when the a trigger condition has fired |
 
 ## Buffers ##
 
