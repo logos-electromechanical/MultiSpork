@@ -1,3 +1,4 @@
+@0xf7d61418b03bac29;
 struct ParamStruct {
 	name @0 :Text;				# name of the parameter
 	guid @1 :UInt64;			# UID of the parameter
@@ -6,16 +7,16 @@ struct ParamStruct {
 		switch @3 :Bool;
 		signed8 @4 :Int8;
 		signed16 @5 :Int16;
-		signed32 @4 :Int32;
-		signed64 @5 :Int64;
-		unsigned8 @6 :UInt8;
-		unsigned16 @7 :UInt16;
-		unsigned32 @8 :UInt32;
-		unsigned64 @9 :UInt64;
-		floatNum @10 :Float32;
-		doubleNum @11 :Float64;
-		stringVal @12 :Text;
-		request @13 :Void;
+		signed32 @6 :Int32;
+		signed64 @7 :Int64;
+		unsigned8 @8 :UInt8;
+		unsigned16 @9 :UInt16;
+		unsigned32 @10 :UInt32;
+		unsigned64 @11 :UInt64;
+		floatNum @12 :Float32;
+		doubleNum @13 :Float64;
+		stringVal @14 :Text;
+		request @15 :Void;
 	}
 }
 	
@@ -38,7 +39,7 @@ struct IntStruct {
 
 struct BufID {
 	channels @0 :List(UInt8);	# The device channel that the buffer either comes from or is intended for. 
-	bufNum @7 :Uint8;			# The buffer number (allows multiple buffers for a single channel)
+	bufNum @7 :UInt8;			# The buffer number (allows multiple buffers for a single channel)
 	rate @1 :Float32;			# The sample rate of the buffer. 
 	startTime @2 :UInt64;		# The start time of the buffer, in microseconds since the epoch.
 	size @3 :UInt32;			# Allocated size of the buffer, in samples
@@ -49,7 +50,7 @@ struct BufID {
 }
 
 struct BufStruct {
-	ID @0 :BufID;				# The identity of the buffer
+	id @0 :BufID;				# The identity of the buffer
 	contents @1 :Data;			# The data to be encoded
 }
 
